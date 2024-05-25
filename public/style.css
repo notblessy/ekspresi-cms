@@ -1,0 +1,167 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.base-container {
+  display: flex;
+  flex-direction: column;
+  background: #EAEDEE;
+  height: 100vh;
+}
+
+.base-row {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  flex: .2;
+  height: 100vh;
+  background: #F9F9F9;
+  color: #242424;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ECECEC;
+  text-decoration: none;
+  padding: 15px;
+  color: #7D7D7D;
+}
+
+.brand ion-icon {
+  font-size: 42px;
+  margin-right: 10px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 5px;
+}
+
+.navbar {
+  height: calc(100% - 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav ul {
+  width: calc(100% - 40px);
+  padding: 20px;
+  margin: 30px 20px 0;
+  list-style: none;
+  padding: 0;
+}
+
+.nav ul li a {
+  color: #242424;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav ul li a ion-icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.nav ul li a:hover {
+  background-color: #ECECEC;
+}
+
+.footer-nav {
+  width: 100%;
+}
+
+.footer-nav ul {
+  width: calc(100% - 40px);
+  padding: 20px;
+  margin: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li a {
+  color: #242424;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  background-color: #ECECEC;
+}
+
+.footer-nav ul li a ion-icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.account {
+  width: 100%;
+  color: #242424;
+}
+
+.account a {
+  color: #242424;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.account a:hover {
+  background-color: #ECECEC;
+}
+
+.account ion-icon {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.body-wrapper {
+  flex: 1;
+  background: #FFF;
+}
+
+
+/* TYPOGRAPHY */
+.text {
+  margin: 0
+}
+
+.xs {font-size: 10px;}
+.sm {font-size: 12px;}
+.md {font-size: 14px;}
+.lg {font-size: 16px;}
+.xl {font-size: 18px;}
+.xxl {font-size: 20px;}
+
+.white {color: #FFF;}
+.black {color: #242424;}
+.dimmed {color: #7F8C8D;}
