@@ -44,7 +44,7 @@ func main() {
 					3: "Comedy",
 				},
 			},
-		})
+		}, "layouts/main")
 	})
 
 	app.Get("/movies", func(c *fiber.Ctx) error {
@@ -57,7 +57,7 @@ func main() {
 					3: "The Dark Knight",
 				},
 			},
-		})
+		}, "layouts/main")
 	})
 
 	app.Post("/count", func(c *fiber.Ctx) error {
