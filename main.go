@@ -7,6 +7,15 @@ import (
 	"github.com/gofiber/template/html/v2"
 )
 
+type Response struct {
+	Page string
+	Data interface{}
+}
+
+func (r Response) PageIs(page string) bool {
+	return r.Page == page
+}
+
 func main() {
 	engine := html.New("./views", ".html")
 
@@ -17,30 +26,36 @@ func main() {
 	app.Static("/", "./public")
 
 	app.Get("/", func(c *fiber.Ctx) error {
-		// Render index template
-		return c.Render("index", fiber.Map{
-			"name": "jon snow!",
-		}, "layouts/main")
-	})
-
-	app.Get("/genres", func(c *fiber.Ctx) error {
-		// Render index template
-		return c.Render("genres", fiber.Map{
-			"genres": map[int]interface{}{
-				1: "Action",
-				2: "Adventure",
-				3: "Comedy",
+		return c.Render("index", Response{
+			Page: "Home",
+			Data: fiber.Map{
+				"name": "jon snow!",
 			},
 		}, "layouts/main")
 	})
 
+	app.Get("/genres", func(c *fiber.Ctx) error {
+		return c.Render("genres", Response{
+			Page: "Genres",
+			Data: fiber.Map{
+				"genres": map[int]interface{}{
+					1: "Action",
+					2: "Adventure",
+					3: "Comedy",
+				},
+			},
+		})
+	})
+
 	app.Get("/movies", func(c *fiber.Ctx) error {
-		// Render index template
-		return c.Render("movies", fiber.Map{
-			"movies": map[int]interface{}{
-				1: "The Shawshank Redemption",
-				2: "The Godfather",
-				3: "The Dark Knight",
+		return c.Render("movies", Response{
+			Page: "Movies",
+			Data: fiber.Map{
+				"movies": map[int]interface{}{
+					1: "The Shawshank Redemption",
+					2: "The Godfather",
+					3: "The Dark Knight",
+				},
 			},
 		})
 	})

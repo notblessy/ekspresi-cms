@@ -23,7 +23,10 @@
   </head>
   <body>
     <div class="base-container">
-      <div class="base-row">{{ embed }}</div>
+      <div class="base-row">
+        {{template "partials/navbar" .}}
+        <div id="body-wrapper" class="body-wrapper">{{ embed }}</div>
+      </div>
     </div>
   </body>
 </html>

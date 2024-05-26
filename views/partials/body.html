@@ -1,29 +1,34 @@
-<div id="count" class="body-wrapper"></div>
-
-{{ block "count" . }} {{ .count}} {{ end }}
+{{ block "home" . }}
+  <h1>{{.Page}}</h1>
+  <h1>{{.Data.name}}</h1>
+</div>
+{{ end }}
 
 <!-- genres -->
 
-<!-- {{ block "genres" . }}
-<div>
-  <h1>Genres</h1>
-  <ul>
-    {{ range .genres }}
-    <li>{{ . }}</li>
-    {{ end }}
-  </ul>
-</div>
-{{ end }} -->
+{{ block "genres" . }}
+<h1>Genres</h1>
+<ul>
+  {{ range .Data.genres }}
+  <li>{{ . }}</li>
+  {{ end }}
+</ul>
+{{ end }}
 
 <!-- movies -->
-<!-- 
+
 {{ block "movies" . }}
+<h1>Movies</h1>
+<ul>
+  {{ range .Data.movies }}
+  <li>{{ . }}</li>
+  {{ end }}
+</ul>
+{{ end }}
+
+<!-- 404 -->
+{{ block "404" . }}
 <div>
-  <h1>Movies</h1>
-  <ul>
-    {{ range .movies }}
-    <li>{{ . }}</li>
-    {{ end }}
-  </ul>
+  <h1>404</h1>
 </div>
-{{ end }} -->
+{{ end }}

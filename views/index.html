@@ -1,1 +1,11 @@
-{{ template "partials/navbar" .}} {{ template "partials/body" .}}
+<!-- home -->
+{{if .PageIs "Home" }} {{template "home" .}}
+
+<!-- genres -->
+{{ else if .PageIs "Genres" }} {{template "genres"}}
+
+<!-- movies -->
+{{ else if .PageIs "Movies" }} {{template "movies"}}
+
+<!-- 404 -->
+{{ else }} {{template "404"}} {{ end }}

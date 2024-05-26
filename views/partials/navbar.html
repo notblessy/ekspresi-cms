@@ -7,15 +7,17 @@
     <div class="nav">
       <ul>
         <li>
-          <a href="/"><ion-icon name="home"></ion-icon> Dashboard</a>
+          <a hx-target="#body-wrapper" hx-get="/"
+            ><ion-icon name="home"></ion-icon> Dashboard</a
+          >
         </li>
         <li>
-          <a href="/genres">
+          <a hx-target="#body-wrapper" hx-get="/genres">
             <ion-icon name="albums-outline"></ion-icon> Genres
           </a>
         </li>
         <li>
-          <a href="/movies">
+          <a hx-target="#body-wrapper" hx-get="/movies">
             <ion-icon name="film-outline"></ion-icon> Movies
           </a>
         </li>
